@@ -52,15 +52,15 @@ $$
 **5. 干涉條件方程：**
 * **相消干涉（反射率極小值）：** 總光程差為波長的整數倍 $m\lambda$。
 
-    $$
-    \text{OPD}_{\text{geom}} + \frac{\lambda}{2} = m\lambda \implies \text{OPD}_{\text{geom}} = (m - \frac{1}{2})\lambda
-    $$
+$$
+\text{OPD}_{\text{geom}} + \frac{\lambda}{2} = m\lambda \implies \text{OPD}_{\text{geom}} = (m - \frac{1}{2})\lambda
+$$
 
 * **相長干涉（反射率極大值）：** 總光程差為半波長的奇數倍 $(m+1/2)\lambda$。
 
-    $$
-    \text{OPD}_{\text{geom}} + \frac{\lambda}{2} = (m + \frac{1}{2})\lambda \implies \text{OPD}_{\text{geom}} = m\lambda
-    $$
+$$
+\text{OPD}_{\text{geom}} + \frac{\lambda}{2} = (m + \frac{1}{2})\lambda \implies \text{OPD}_{\text{geom}} = m\lambda
+$$
 
 ### 1.3 最終模型
 
@@ -106,9 +106,9 @@ $$
 * 為解決上述問題，我們引入物理先驗知識。根據學術文獻（例如，S. Adachi, "Optical Constants of Crystalline and Amorphous Semiconductors"），4H-SiC晶體在該紅外波段的折射率 $n_1$ 約為**2.58**。我們以此作為計算中的有效折射率。
 * **厚度計算：**
 
-    $$
-    d = \frac{\text{OPD}}{2\sqrt{n_1^2 - \sin^2 \theta_i}}
-    $$
+$$
+d = \frac{\text{OPD}}{2\sqrt{n_1^2 - \sin^2 \theta_i}}
+$$
 
     * 使用 $\theta_i=10^\circ$ 數據：$d = 39.7371 / (2\sqrt{2.58^2 - \sin^2(10^\circ)}) = 7.719 \, \mu\text{m}$。
     * 使用 $\theta_i=15^\circ$ 數據：$d = 39.7371 / (2\sqrt{2.58^2 - \sin^2(15^\circ)}) = 7.740 \, \mu\text{m}$。
