@@ -3,8 +3,13 @@ DDM (Drift Detection Method) Detector
 Monitors error rate and its standard deviation
 """
 
-from river.drift import DDM
 from typing import Dict, Optional
+
+# Try to import from river, fall back to simple implementation
+try:
+    from river.drift import DDM
+except (ImportError, AttributeError):
+    from .simple_detectors import DDM
 
 
 class DDMDetector:
