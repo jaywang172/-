@@ -1,0 +1,131 @@
+╔═══════════════════════════════════════════════════════════════════╗
+║                    FedDriftBench Quick Start                      ║
+║                                                                   ║
+║  Automated Benchmark for Drift Detection in Federated Learning   ║
+╚═══════════════════════════════════════════════════════════════════╝
+
+🚀 INSTALLATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Install dependencies:
+   pip install -r requirements.txt
+
+2. Verify installation:
+   python -c "import torch; import river; print('✓ Ready!')"
+
+
+🎯 RUN EXPERIMENTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+OPTION 1: Quick Demo (5 minutes)
+   python quick_start.py
+
+OPTION 2: Full Benchmark (1-2 hours)
+   python experiments/run_benchmark.py
+
+OPTION 3: Custom Experiment
+   python examples/custom_experiment.py --mode detector
+
+
+📊 VISUALIZE RESULTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+After running experiments:
+   python experiments/visualize_results.py
+
+Plots saved to: results/visualizations/
+
+
+📁 PROJECT STRUCTURE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FedDriftBench/
+├── core/                   # FL simulator & drift injection
+├── detectors/              # Drift detection methods
+│   └── baseline/           # ADWIN, DDM, KSWIN
+├── scenarios/              # 4 standard scenarios
+├── datasets/               # Data generation
+├── experiments/            # Benchmark runner & visualization
+├── results/                # Generated results & plots
+├── examples/               # Usage examples
+└── docs/                   # Documentation
+
+
+📚 DOCUMENTATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+• README.md              - Main documentation
+• docs/GETTING_STARTED.md - Detailed setup guide
+• docs/PAPER_TEMPLATE.md  - Research paper template
+• PROJECT_SUMMARY.md      - Complete project overview
+
+
+🔬 4 BENCHMARK SCENARIOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+A. Homogeneous Drift      - All clients drift simultaneously
+B. Heterogeneous Drift    - Clients drift at different times
+C. Partial Participation  - Subset of clients each round
+D. Staggered Drift        - Groups drift in sequence
+
+
+🛠️  3 DRIFT DETECTORS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+• ADWIN  - Adaptive windowing (best for gradual drift)
+• DDM    - Error monitoring (fast sudden drift detection)
+• KSWIN  - Statistical testing (balanced performance)
+
+
+📊 EVALUATION METRICS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+• Precision          - Correctness of detections
+• Recall             - Coverage of true drifts
+• F1 Score           - Balanced metric
+• Detection Delay    - Speed of detection
+• Final Accuracy     - End-to-end performance
+
+
+🎓 FOR RESEARCH
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Run full benchmark
+2. Use docs/PAPER_TEMPLATE.md to structure your paper
+3. Target journals:
+   - IEEE TNNLS (Q1)
+   - Information Sciences (Q1/Q2)
+   - Applied Sciences (Q2)
+
+
+💡 QUICK TIPS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+• Start with quick_start.py to understand the flow
+• Modify config in run_benchmark.py for your needs
+• Add custom detectors in detectors/
+• Extend scenarios in scenarios/
+• Results auto-saved as JSON and PNG
+
+
+🤝 CONTRIBUTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+• Fork on GitHub
+• Add features/fixes
+• Submit pull request
+
+
+📞 SUPPORT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+• Read documentation
+• Check examples/
+• Open GitHub issue
+
+
+═══════════════════════════════════════════════════════════════════
+
+                   🚀 Happy Benchmarking! 🚀
+
+═══════════════════════════════════════════════════════════════════
