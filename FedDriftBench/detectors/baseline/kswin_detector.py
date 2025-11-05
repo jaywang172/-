@@ -3,8 +3,13 @@ KSWIN (Kolmogorov-Smirnov Windowing) Drift Detector
 Uses statistical test to compare recent and reference windows
 """
 
-from river.drift import KSWIN
 from typing import Dict, Optional
+
+# Try to import from river, fall back to simple implementation
+try:
+    from river.drift import KSWIN
+except (ImportError, AttributeError):
+    from .simple_detectors import KSWIN
 
 
 class KSWINDetector:

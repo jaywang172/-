@@ -3,8 +3,13 @@ ADWIN (Adaptive Windowing) Drift Detector
 Uses adaptive sliding window to detect changes in data distribution
 """
 
-from river.drift import ADWIN
 from typing import Dict, Optional
+
+# Try to import from river, fall back to simple implementation
+try:
+    from river.drift import ADWIN
+except (ImportError, AttributeError):
+    from .simple_detectors import ADWIN
 
 
 class ADWINDetector:
